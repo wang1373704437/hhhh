@@ -13,5 +13,5 @@ public class Config {
     //冲顶大会项目id
     public static final String CDDH="4181815";
 
-
+    public static String PHONE="";
 }

@@ -93,6 +93,7 @@ public class AutoActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.bn_start:
+                ShenHuaUtils.GetPhone(Config.CDDH,Config.TOKEN);
                 break;
             case R.id.bn_login:
                 ShenHuaUtils.login(username.getText().toString().trim(),

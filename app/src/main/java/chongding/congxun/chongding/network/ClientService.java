@@ -38,18 +38,19 @@ public interface ClientService {
 
     //神话平台登录
     @GET("pubApi/uLogin")
-    Call<String> uLogin(@Query("uName") String uName,@Query("pWord") String pWord,
-                             @Query("Developer") String Developer); //神话平台登录
+    Call<String> uLogin(@Query("uName") String uName, @Query("pWord") String pWord,
+                        @Query("Developer") String Developer); //神话平台登录
 
     //GET - GET方式调用实例：http://api.shjmpt.com:9002/uGetItems?token=token&tp=ut
     @GET("uGetItems")
-    Call<String> uGetItems(@Query("token") String token,@Query("tp") String tp);
+    Call<String> uGetItems(@Query("token") String token, @Query("tp") String tp);
 
     @GET("pubApi/uExit")
     Call<String> uExit(@Query("token") String token);
 
     @GET("pubApi/GetPhone")
-    Call<String> GetPhone(@Query("ItemId") String ItemId,@Query("token") String token);
+    Call<String> GetPhone(@Query("ItemId") String ItemId, @Query("token") String token);
 
-
+    @GET("GMessage")
+    Call<String> GMessage(@Query("token") String token, @Query("ItemId") String ItemId, @Query("Phone") String Phone);
 }
