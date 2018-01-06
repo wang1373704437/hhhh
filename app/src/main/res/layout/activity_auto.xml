@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="chongding.congxun.chongding.AutoActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:hint="邀请码"
+            android:id="@+id/yaoqingma"
+            android:layout_width="100dp"
+            android:layout_height="48dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="次数" />
+
+        <EditText
+            android:id="@+id/count"
+            android:editable="false"
+            android:inputType="number"
+            android:layout_width="60dp"
+            android:layout_height="48dp" />
+
+        <Button
+            android:id="@+id/bn_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="加心" />
+        <Button
+            android:id="@+id/bn_resut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="归零" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/ll_1"
+        android:orientation="vertical">
+
+        <EditText
+            android:hint="神话平台帐号"
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="48dp" />
+        <EditText
+            android:id="@+id/password"
+            android:hint="神话平台密码"
+            android:layout_width="match_parent"
+            android:inputType="textPassword"
+            android:layout_height="48dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:id="@+id/bn_login"
+            android:text="获取token" />
+        <Button
+            android:id="@+id/bn_exit"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="注销token" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_token"
+            android:text="token："
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_below="@+id/ll_2"
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:background="#e0e0e0">
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#e0e0e0"
+            android:text="日志信息:"
+            android:textColor="@color/colorPrimary" />
+    </ScrollView>
+</RelativeLayout>
